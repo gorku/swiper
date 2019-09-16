@@ -2594,9 +2594,9 @@ function slideTo(
           targets,
           duration: speed,
           translate,
-          easing: "easeInOutCubic",
-          update: () => {
-            swiper.setTranslate(targets.translate);
+          easing: "easeOutCubic",
+          update: anim => {
+            swiper.setTranslate(targets.translate, anim.progress);
           },
           complete: () => {
             swiper.animating = false;

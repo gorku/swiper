@@ -3439,9 +3439,9 @@
             targets: targets,
             duration: speed,
             translate: translate,
-            easing: "easeInOutCubic",
-            update: function () {
-              swiper.setTranslate(targets.translate);
+            easing: "easeOutCubic",
+            update: function (anim) {
+              swiper.setTranslate(targets.translate, anim.progress);
             },
             complete: function () {
               swiper.animating = false;
