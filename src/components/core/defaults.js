@@ -1,7 +1,7 @@
 export default {
   init: true,
-  direction: 'horizontal',
-  touchEventsTarget: 'container',
+  direction: "horizontal",
+  touchEventsTarget: "container",
   initialSlide: 0,
   speed: 300,
   //
@@ -31,7 +31,7 @@ export default {
   virtualTranslate: false,
 
   // Effects
-  effect: 'slide', // 'slide' or 'fade' or 'cube' or 'coverflow' or 'flip'
+  effect: "slide", // 'slide' or 'fade' or 'cube' or 'coverflow' or 'flip'
 
   // Breakpoints
   breakpoints: undefined,
@@ -41,7 +41,7 @@ export default {
   spaceBetween: 0,
   slidesPerView: 1,
   slidesPerColumn: 1,
-  slidesPerColumnFill: 'column',
+  slidesPerColumnFill: "column",
   slidesPerGroup: 1,
   centeredSlides: false,
   slidesOffsetBefore: 0, // in px
@@ -105,26 +105,28 @@ export default {
   allowSlideNext: true,
   swipeHandler: null, // '.swipe-handler',
   noSwiping: true,
-  noSwipingClass: 'swiper-no-swiping',
+  noSwipingClass: "swiper-no-swiping",
   noSwipingSelector: null,
 
   // Passive Listeners
   passiveListeners: true,
 
   // NS
-  containerModifierClass: 'swiper-container-', // NEW
-  slideClass: 'swiper-slide',
-  slideBlankClass: 'swiper-slide-invisible-blank',
-  slideActiveClass: 'swiper-slide-active',
-  slideDuplicateActiveClass: 'swiper-slide-duplicate-active',
-  slideVisibleClass: 'swiper-slide-visible',
-  slideDuplicateClass: 'swiper-slide-duplicate',
-  slideNextClass: 'swiper-slide-next',
-  slideDuplicateNextClass: 'swiper-slide-duplicate-next',
-  slidePrevClass: 'swiper-slide-prev',
-  slideDuplicatePrevClass: 'swiper-slide-duplicate-prev',
-  wrapperClass: 'swiper-wrapper',
+  containerModifierClass: "swiper-container-", // NEW
+  slideClass: "swiper-slide",
+  slideBlankClass: "swiper-slide-invisible-blank",
+  slideActiveClass: "swiper-slide-active",
+  slideDuplicateActiveClass: "swiper-slide-duplicate-active",
+  slideVisibleClass: "swiper-slide-visible",
+  slideDuplicateClass: "swiper-slide-duplicate",
+  slideNextClass: "swiper-slide-next",
+  slideDuplicateNextClass: "swiper-slide-duplicate-next",
+  slidePrevClass: "swiper-slide-prev",
+  slideDuplicatePrevClass: "swiper-slide-duplicate-prev",
+  wrapperClass: "swiper-wrapper",
 
   // Callbacks
   runCallbacksOnInit: true,
+
+  useCSS: true
 };

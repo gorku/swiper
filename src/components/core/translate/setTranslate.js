@@ -1,10 +1,8 @@
-import Support from '../../../utils/support';
+import Support from "../../../utils/support";
 
-export default function (translate, byController) {
+export default function(translate, byController) {
   const swiper = this;
-  const {
-    rtlTranslate: rtl, params, $wrapperEl, progress,
-  } = swiper;
+  const { rtlTranslate: rtl, params, $wrapperEl, progress } = swiper;
   let x = 0;
   let y = 0;
   const z = 0;
@@ -21,11 +19,17 @@ export default function (translate, byController) {
   }
 
   if (!params.virtualTranslate) {
-    if (Support.transforms3d) $wrapperEl.transform(`translate3d(${x}px, ${y}px, ${z}px)`);
+    if (Support.transforms3d)
+      $wrapperEl.transform(`translate3d(${x}px, ${y}px, ${z}px)`);
     else $wrapperEl.transform(`translate(${x}px, ${y}px)`);
   }
+
   swiper.previousTranslate = swiper.translate;
   swiper.translate = swiper.isHorizontal() ? x : y;
+
+  if (!swiper.initialized) {
+    swiper.previousTranslate = translate;
+  }
 
   // Check if we need to update progress
   let newProgress;
@@ -33,11 +37,11 @@ export default function (translate, byController) {
   if (translatesDiff === 0) {
     newProgress = 0;
   } else {
-    newProgress = (translate - swiper.minTranslate()) / (translatesDiff);
+    newProgress = (translate - swiper.minTranslate()) / translatesDiff;
   }
   if (newProgress !== progress) {
     swiper.updateProgress(translate);
   }
 
-  swiper.emit('setTranslate', swiper.translate, byController);
+  swiper.emit("setTranslate", swiper.translate, byController);
 }
